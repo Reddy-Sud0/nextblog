@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { logout } from "@/store/slices/authSlice";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 const stats = [
   { label: "Total Posts", value: "150+", icon: "📝", color: "from-violet-500 to-purple-600" },
