@@ -31,7 +31,7 @@ export default function AboutPage() {
   return (
     <div className="space-y-16">
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 px-8 py-14 text-white shadow-2xl">
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-violet-100 via-white to-blue-100 px-8 py-14 text-slate-900 shadow-2xl dark:from-slate-900 dark:via-violet-900 dark:to-slate-900 dark:text-white">
         <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-violet-500/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
         <div className="relative max-w-2xl">

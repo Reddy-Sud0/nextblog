@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
@@ -17,6 +18,11 @@ const links = [
 export default function TopNav() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className="sticky top-0 z-20 border-b border-slate-200/70 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
@@ -63,7 +69,7 @@ export default function TopNav() {
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="ml-2 rounded-lg border border-slate-200 px-3 py-1.5 text-sm text-slate-700 transition hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
           >
-            {theme === "dark" ? "☀️" : "🌙"}
+            {mounted ? (theme === "dark" ? "☀️" : "🌙") : "🌙"}
           </button>
         </div>
       </nav>
